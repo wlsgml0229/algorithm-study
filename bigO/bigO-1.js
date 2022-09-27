@@ -1,16 +1,15 @@
 function addUpTo(n) {
-    let total = 0;
-    for(let i = 1; i <= n; i++) {
-        total += i;
-    }
-    return total;
+  let total = 0;
+  for (let i = 1; i <= n; i++) {
+    total += i;
+  }
+  return total;
 }
 
 // console.log(addUpTo(100))
 
-
 function addUpTo2(n) {
-    return n * (n + 1) / 2;
+  return (n * (n + 1)) / 2;
 }
 
 // console.log(addUpTo2(100))
@@ -23,8 +22,7 @@ function addUpTo2(n) {
 let t1 = performance.now();
 addUpTo2(10000000000);
 let t2 = performance.now();
-console.log(`Time Elapsed: ${(t2 - t1)/ 1000 } seconds.`)
-
+console.log(`Time Elapsed: ${(t2 - t1) / 1000} seconds.`);
 
 // 2번째 방법이 훨씬 더 시간이 짧게걸린다.
 // 수동으로 타이밍을 구하고 비교하는 것이 좋은방법이 아님!
@@ -37,21 +35,23 @@ console.log(`Time Elapsed: ${(t2 - t1)/ 1000 } seconds.`)
 
 //아래 코드에서 곱셈, 덧셈, 나눗셈이 존재한다.
 //연산을 3번 해야하는 것 숫자 n과는 상관없이!
+// 시간의 차이가 거의없다.
 
 function addUpTo2(n) {
-    return n * (n + 1) / 2;
+  return (n * (n + 1)) / 2;
 }
 
 //루프가 있기 때문에 달라진다. 숫자가 5면 5번의 연산이 더 추가, 호출하는 인수의 수만큼 연산이 늘어나게 된다.
 // 전체적인 큰 그림이 중요하다.
-// N이 커질수록 연산이 늘어나게된다.
+// N이 커질수록 연산이 늘어나게된다. (시간이 늘어나게 된다.)
+// 1대1 비율로 선형으로 늘어나게됨
 
 function addUpTo(n) {
-    let total = 0;
-    for(let i = 1; i <= n; i++) {
-        total += i;
-    }
-    return total;
+  let total = 0;
+  for (let i = 1; i <= n; i++) {
+    total += i;
+  }
+  return total;
 }
 
 //하나하나 세는게 중요한게 아니라 연산의 갯수가 비례적으로 늘어난다에 초점을 둔다.
