@@ -40,5 +40,3 @@ charCount("hello"); // {h:1, e:1, l:2, o:1}
 // 대문자가 포함될 경우 어떻게 해야될지
 
 charCount(""); // null, false , undefined
-
-//
