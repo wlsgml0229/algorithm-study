@@ -27,3 +27,18 @@
 
 // 5. How should I label the important pieces of data that are a part of the problem?
 // 문제에 대한 라벨을 어떻게 정할지
+
+// 문자의 수를 반환하는 함수 작성
+charCount("aaaa"); // {a:4}
+
+charCount("hello"); // {h:1, e:1, l:2, o:1}
+
+("my phone number is 182763");
+// 공백, 문자 , 기호 , 숫자 등 어떻게 해야될지?
+
+("Hello hi");
+// 대문자가 포함될 경우 어떻게 해야될지
+
+charCount(""); // null, false , undefined
+
+//
