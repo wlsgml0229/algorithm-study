@@ -38,9 +38,9 @@ function maxSubarraySum(arr, num) {
   }
   tempSum = maxSum;
   for (let i = num; i < arr.length; i++) {
-    //앞의 숫자를 빼고 뒤의 숫자를 다시 더하면됨
+    //앞의 숫자를 빼고 뒤의 숫자를 다시 더하고, tempSum 에 저장된 값으로 다시 반복해서 비교
     tempSum = tempSum - arr[i - num] + arr[i];
-
+    // 둘중 더큰값을 maxSum 에다가 담고
     maxSum = Math.max(maxSum, tempSum);
   }
   return maxSum;
