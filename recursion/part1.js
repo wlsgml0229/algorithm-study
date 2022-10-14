@@ -19,3 +19,21 @@
 // 재귀함수 작성의 반드시 필요한 두가지 요소
 // 호출스택 과 재귀가 어떤 관련이 있는지
 // 헬퍼메소드 재귀 순수재귀
+
+/**
+ * 재귀의 정의
+ * 재귀는 자기자신을 호출하는 함수 ( 자바스크립트나 코드를 가지고 하는 모든 일)
+ * 계속 반복되니까 종료점이 필요하다. (무한 루프랑은 다름)
+ *
+ */
+
+// 재귀사용하는 예시
+// JSON.parse / JSON.stringify
+// document.getElementById and Dom traversal
+// Object traversal
+// We will see it with more complex data structures
+// 반복대신 재귀를 사용하는게 더 깔끔할 수 있음
+
+// 재귀를 사용해야하는 이유?
+// 보다 어려운 데이터 구조를 다루게 되고 , 직접 parse함수나 getElementById 함수를 작성할때 정말 중요하다.
+// 트리를 순회하는 걸 예로 들 수 있다.
