@@ -34,3 +34,23 @@ countDown(5);
 // }
 
 // countDown(5);
+
+// 종료조건이 보이는지?
+// 종료조건에는 대부분 무언가를 찾기위한 조건이 붙고 return 하게 된다.
+// 매번 더 작은 값을 가지고 호출하게 된다.
+function sumRange(num) {
+  //1과 1사이의 숫자는 1
+  if (num === 1) return 1;
+  return num + sumRange(num - 1);
+}
+
+sumRange(3);
+// return 3 + sumRange(2)
+//             return 2 + sumRange(1)
+//                         return 1
+
+// 더이상 재귀호출이 끝나게된다.
+// 뒤에서 리턴된 1부터 다시 점차적으로 return 을 반복하며 최종적으로
+// return 3 + 3 이 된다.
+// 숫자가 커지면 커질 수록 스택에 훨씬 더 많은 함수 호출이 쌓이기 떄문에 조심해야된다.
+// 다음 더해질 값을 위해 기다리고있음
