@@ -7,6 +7,7 @@
  */
 
 function collectOddValues(arr) {
+  // 재귀적으로 호출 한다면 계속 빈배열이 될것 , 헬퍼함수를 통해 바깥에 배치함으로써 해결
   let result = [];
   function helper(helperInput) {
     // 종료조건 - 배열이 비어있다면 종료
