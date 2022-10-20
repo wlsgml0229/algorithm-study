@@ -8,6 +8,15 @@ function factorial(num) {
   for (let i = num; i > 1; i--) {
     total *= i;
   }
+  return total;
 }
 
 factorial(4);
+
+function factorial(num) {
+  // 1 이되면 종료 0을 곱하기전에
+  if (num === 1) return 1;
+  return num * factorial(num - 1);
+}
+
+factorial(5);
