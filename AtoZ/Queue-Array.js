@@ -40,3 +40,8 @@ console.log(queue.peek()); //2
 console.log(queue.dequeue()); //2
 console.log(queue.dequeue()); //4
 
+//!!Shift 함수는 쓰지말것
+const arr = [1,2,3];
+arr.push(4);
+const value = queue.shift(); // O(n) 선형시간발생
+console.log(value); // 1
