@@ -20,4 +20,35 @@ class MaxHeap {
       parentIdx = Math.floor(currentIdx / 2);
     }
   }
+
+  pop() {
+    const returnValue = this.heap[1];
+    this.heap[1] = this.heap.pop();
+
+    let currentIdx = 1;
+    let leftIdx = 2;
+    let rightIdx = 3;
+
+    while (
+      this.heap[currentIdx] < this.heap[leftIdx] ||
+      this.heap[currentIdx < this.heap[rightIdx]]
+    ) {
+      if (this.heap[leftIdx] < this.heap[rightIdx]) {
+        const temp = this.heap[currentIdx];
+        this.heap[currentIdx] = this.heap[rightIdx];
+        this.heap[rightIdx] = temp;
+        currentIdx = rightIdx;
+      } else {
+        const temp = this.heap[currentIdx];
+        this.heap[currentIdx] = this.heap[leftIdx];
+        this.heap[leftIdx] = temp;
+        currentIdx = leftIdx;
+      }
+      leftIdx = currentIdx * 2;
+      //오른쪽 하나추가
+      rightIdx = currentIdx * 2 + 1;
+    }
+
+    return returnValue;
+  }
 }
