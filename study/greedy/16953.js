@@ -24,3 +24,27 @@ while (a <= b) {
 
 if (flag) console.log(cnt);
 else console.log(-1);
+
+// ================
+
+function solution(a, b) {
+  let answer = 0;
+
+  while (a > b) {
+    if (a !== b) {
+      return -1;
+    } else if (getLastPosition(b) === 1) {
+      b = removeOneOfLastPosition(b);
+      answer++;
+    } else if (getLastPosition(b) !== 1) {
+      b /= 2;
+      answer++;
+    }
+    return answer + 1;
+  }
+}
+
+function getLastPosition(num) {
+  let result = num;
+  result / 10;
+}
