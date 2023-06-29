@@ -1,5 +1,5 @@
 let [n,dist, cost] =  require('fs').readFileSync('/dev/stdin').toString().split('\n');
-
+n = Number(n);
 dist = dist.split(' ').map(Number);
 cost = cost.split(' ').map(Number);
 
