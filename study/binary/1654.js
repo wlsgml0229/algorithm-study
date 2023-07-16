@@ -5,7 +5,7 @@ const [n, ...rest] = require("fs")
   .split("\n");
 
   let [length, target] = n.split(' ').map(Number)
-  let arr = rest.split(' ').map(Number);
+  let arr = rest.map(Number);
 
   let start = 1;
   let end = arr.reduce((a,b) => Math.max(a,b));
@@ -30,3 +30,4 @@ console.log(result);
 // 길이를 키우면 얻을수 있는 랜선수 감소
 // 길이를 줄이면 얻을 수 있는 랜선수 증가
 
+// 탐색 범위 정의 -> 어떤 행위 해보고 만족하는지, 못하는지에 따라 범위 변경
