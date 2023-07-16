@@ -1,5 +1,3 @@
-const { setMaxIdleHTTPParsers } = require("http");
-
 const file = process.platform === "linux" ? "/dev/stdin" : "./input.txt";
 const [n, mid, m] = require("fs")
   .readFileSync(file)
