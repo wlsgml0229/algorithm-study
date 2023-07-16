@@ -18,10 +18,13 @@ const [n, m] = require("fs")
         total += x - mid;
       }
   }
+  // 목표하는 나무 양 보다 부족하면 더 많이 자르기
   if(total < target) end = mid - 1;
-  else {
-    result = mid;
+  else { // 나무의 양이 충분하면 덜 자르기 
+    result = mid; // 최대한 덜 잘랐을때가 정답이므로 result에 기록
     start = mid + 1;
   }
 }
 console.log(result);
+
+// 나무 최대갯수 
