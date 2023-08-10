@@ -16,6 +16,7 @@ function dfs (x, dist) {
     if(visited[x]) return;
     visited[x] = true;
     distance[x] = dist;
+    console.log('x', x)
     for(let [y,cost] of graph[x]) dfs(y, dist+ cost)
 }
 
