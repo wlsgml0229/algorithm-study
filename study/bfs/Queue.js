@@ -1,4 +1,4 @@
-class Queue {
+ class Queue {
   constructor() {
     this.items = {};
     this.headIndex = 0;
@@ -22,3 +22,6 @@ class Queue {
     return this.tailIndex - this.headIndex;
   }
 }
+
+
+module.exports = Queue;
