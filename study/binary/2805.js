@@ -13,7 +13,7 @@ const [n, m] = require("fs")
   while(start <= end) {
   let mid = parseInt((start + end)/2); 
   let total = 0;
-  for(x of arr) {
+    for(x of arr) {
       if(x > mid) {
         total += x - mid;
       }
