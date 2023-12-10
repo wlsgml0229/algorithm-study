@@ -12,6 +12,7 @@ class Queue {
   }
 
   dequeue() {
+    //프론트 요소 담아둠
     const value = this.queue[this.front];
     delete this.queue[this.front];
     this.front += 1;
