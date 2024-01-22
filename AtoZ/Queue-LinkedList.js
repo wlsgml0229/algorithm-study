@@ -15,7 +15,7 @@ class Queue {
   enqueue(newValue) {
     const newNode = new Node(newValue);
     if (this.head === null) {
-      this.head = this.tail = newValue;
+      this.head = this.tail = newNode;
     } else {
       this.tail.next = newNode;
       this.tail = newNode;
@@ -39,8 +39,8 @@ const queue = new Queue();
 queue.enqueue(1);
 queue.enqueue(2);
 queue.enqueue(4);
-console.log(queue.dequeue());
 queue.enqueue(8);
+console.log(queue);
 console.log(queue.size);
 console.log(queue.peek());
 console.log(queue.dequeue());
