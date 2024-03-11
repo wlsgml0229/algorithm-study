@@ -7,8 +7,8 @@ const [n, m] = require("fs")
   .split(" ")
   .map(Number);
 
+  // 중복순열 -> 중복이 되어도 되니까 기존코드에서 visited만 제거 해 주면됨 
 let result = ''
-let visited = new Array(n).fill(false);
 let selected = []
 
 function dfs(depth, start) {
@@ -19,13 +19,10 @@ function dfs(depth, start) {
     }
 
     for (let i = start; i < n; i++) {
-        // 중복이 없으니 방문한것은 포함하지 않음
-        if (visited[i]) continue;
-        visited[i] = true;
         selected.push(i + 1);
         dfs(depth + 1, i);
         selected.pop();
-        visited[i] = false;
+
     }
 
 }
